@@ -140,11 +140,13 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="image-container" style="width: 95%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);"> 
-      <img src="./static/images/teaser_cropped.jpg" alt="ImageDoctor" style="max-width: 100%;">
+      <div class="content has-text-centered">
+        <img src="./static/images/teaser_cropped.jpg" alt="data-overview" width="800" height="600">
     </div>'
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf"> Comparison between ImageDoctor and scalar-based reward functions.
+        <span class="dnerf"> <b>Comparison between ImageDoctor and scalar-based reward functions.</b> <br><em>Left</em>: ImageDoctor follows a <em>look-think-predict</em> paradigm, 
+          providing rich feedback with four-dimensional scores and heatmaps that highlight misalignment and artifact locations. <em>Right</em>: Leveraging this fine-grained feedback, 
+          DenseFlow-GRPO generates images with more faithful and realistic local details, outperforming Flow-GRPO, which relies on the scalar-based reward PickScore.
       </h2>
     </div>
   </div>
