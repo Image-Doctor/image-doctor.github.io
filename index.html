@@ -60,7 +60,7 @@
               <a href="https://zewang95.github.io/">Ze Wang</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="#">Hao Chen</a><sup>2</sup>,
+              <a href="https://hhhhhhao.github.io/">Hao Chen</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://sunxm2357.github.io/">Ximeng Sun</a><sup>2</sup>,
@@ -152,9 +152,9 @@
     </div>'
       <h2 class="subtitle has-text-centered">
         <p class="has-text-centered"> <b>Comparison between ImageDoctor and scalar-based reward functions.</b></p>
-        <p class="has-text-centered"><br><em>Left</em>: ImageDoctor follows a <em>look-think-predict</em> paradigm, 
+        <p class="has-text-centered is-size-6"><br><em>Left</em>: ImageDoctor follows a <em>look-think-predict</em> paradigm, 
           providing rich feedback with four-dimensional scores and heatmaps that highlight misalignment and artifact locations.</p>
-        <p class="has-text-centered"><br><em>Right</em>: Leveraging this fine-grained feedback, 
+        <p class="has-text-centered is-size-6"><br><em>Right</em>: Leveraging this fine-grained feedback, 
           DenseFlow-GRPO generates images with more faithful and realistic local details, outperforming Flow-GRPO, which relies on the scalar-based reward PickScore.</p>
       </h2>
     </div>
@@ -293,7 +293,8 @@
         <div class="content" style="margin-top: 1cm;">
           <img src="./static/images/verifier.png" alt="verifier" style="width:100%;">
           <p class="has-text-centered is-size-6" style="margin-top:0.5em;">
-            The Verifier ensures accurate multi-aspect evaluation of generated images.
+            We employ ImageDoctor as a verifier to distinguish subtle differences among generated images and reliably select the best candidate. 
+            It consistently favors images that align more closely with the prompt, often preferring those with more realistic and coherent details.
           </p>
         </div>
       </div>
@@ -304,7 +305,10 @@
         <div class="content" style="margin-top: 1cm;">
           <img src="./static/images/reward.png" alt="reward function" style="width:100%;">
           <p class="has-text-centered is-size-6" style="margin-top:0.5em;">
-            The Verifier ensures accurate multi-aspect evaluation of generated images.
+            ImageDoctor produces both spatial heatmaps and scalar scores, making it well-suited for pixel-level feedback. 
+            We incorporate heatmap-guided dense rewards to enable more fine-grained optimization. 
+            While Flow-GRPO relies on image-level rewards that provide only a sparse global score—often insufficient for addressing localized 
+            artifacts—DenseFlow-GRPO leverages heatmap-based dense rewards to directly target and refine local regions, effectively reducing such flaws.
           </p>
         </div>
       </div>
