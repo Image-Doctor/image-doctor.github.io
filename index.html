@@ -185,21 +185,40 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop" >
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Model Architecture</h2>
+
+
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="content has-text-centered" style="margin-top: 1cm;">
+        <img src="./static/images/pipeline_cropped.jpg" alt="pipeline" >
+      </div>
+    </div>
+    
+    <div class="hero-body">
+      <h2 class="has-text-justified" style="margin-top: -1cm;">
+        <p class="">Given a prompt-image pair, the MLLM follows a <em>"look-think-predict"</em> paradigm for T2I evaluation 
+          by localizing potential flaw regions, analyzing them, and generating holistic scores and special task tokens. 
+          The task token, with a learned heatmap token and image features are fed into the heatmap 
+          decoder to produce the misalignment and artifact heatmaps.</p>
+      </h2>
+    </div>
+    
+  </div>
+  </div>
+
+
+
+</section>
+  
 
 <section class="section">
   <div class="container is-max-desktop">
